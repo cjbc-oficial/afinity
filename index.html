@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<meta name="description" content="Afinity - Conexões que florescem. Plataforma de relacionamento baseada em afinidade cultural, valores compartilhados e respeito mútuo.">
+<meta name="theme-color" content="#0a1f0d">
+<meta name="format-detection" content="telephone=no">
+<title>Afinity - Conexões que florescem</title>
+<link rel="preconnect" href="https://saudeecannabis.com.br">
+<style>
+/* Critical CSS inline */
+body{margin:0;font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,sans-serif;color:#e8f5e9;background:#0a1f0d}
+.hero{background:linear-gradient(135deg,#0d2818 0%,#1a3d2a 100%);color:#e8f5e9;padding:60px 20px;text-align:center;min-height:100vh;display:flex;align-items:center;justify-content:center}
+</style>
+<link rel="stylesheet" href="styles.css" media="print" onload="this.media='all';this.onload=null">
+<noscript><link rel="stylesheet" href="styles.css"></noscript>
+</head>
+<body>
+
+<!-- HERO -->
+<section class="hero" id="hero">
+<div class="container">
+<div class="logo">🌱</div>
+<h1 class="hero-title">Afinity</h1>
+<p class="hero-tagline">Conexões que florescem</p>
+<p class="hero-subtitle">Uma plataforma de relacionamento para adultos que compartilham valores, visão aberta sobre cannabis, bem-estar e diálogo consciente.</p>
+<button class="cta-button" onclick="scrollToForm()" type="button" aria-label="Ir para formulário de cadastro">Entrar na lista de espera</button>
+</div>
+</section>
+
+<!-- INSTITUCIONAL -->
+<section class="institutional">
+<div class="container">
+<h2>Por que o Afinity existe?</h2>
+<p>Vivemos em um momento em que muitas pessoas ainda escondem quem são ou o que pensam para evitar conflitos e preconceitos — inclusive dentro dos relacionamentos.</p>
+<p>O Afinity nasce para conectar adultos com afinidade cultural, visão responsável e respeito mútuo, criando um ambiente seguro, moderno e alinhado com o futuro.</p>
+</div>
+</section>
+
+<!-- PRINCÍPIOS -->
+<section class="principles">
+<div class="container">
+<h2>Princípios do projeto</h2>
+<ul class="principles-list">
+<li><span class="icon">✓</span> Apenas para maiores de 18 anos</li>
+<li><span class="icon">✓</span> Regras claras de convivência</li>
+<li><span class="icon">✓</span> Moderação ativa</li>
+<li><span class="icon">✓</span> Sem apologia, incentivo ou comércio</li>
+<li><span class="icon">✓</span> Foco em bem-estar, cultura e diálogo</li>
+</ul>
+<p class="principles-emphasis">Este não é um aplicativo sobre consumo.<br>É sobre afinidade, valores e conexão humana.</p>
+</div>
+</section>
+
+<!-- FAQ -->
+<section class="faq" id="faq">
+<div class="container">
+<h2>Perguntas Frequentes</h2>
+
+<div class="faq-grid">
+<div class="faq-item">
+<h3>O que é o Afinity?</h3>
+<p>Uma plataforma de relacionamento e afinidade cultural voltada para adultos que compartilham valores, visão aberta sobre cannabis, bem-estar e diálogo consciente. Nosso foco é conectar pessoas através de afinidades culturais e respeito mútuo.</p>
+</div>
+
+<div class="faq-item">
+<h3>O Afinity promove o uso de cannabis?</h3>
+<p>Não. O Afinity não promove, incentiva ou orienta o uso de substâncias. Nosso foco é exclusivamente em afinidade cultural, valores compartilhados e conexão humana, sempre respeitando a legislação vigente.</p>
+</div>
+
+<div class="faq-item">
+<h3>Quando será lançado?</h3>
+<p>Estamos em fase de validação de interesse. Ao se cadastrar na lista de espera, você receberá informações em primeira mão sobre o lançamento e terá acesso antecipado à plataforma.</p>
+</div>
+
+<div class="faq-item">
+<h3>Meus dados estão seguros?</h3>
+<p>Sim. A privacidade e segurança são nossas prioridades máximas. Implementamos medidas robustas de proteção e conformidade total com a LGPD. Não vendemos ou compartilhamos dados identificáveis com terceiros.</p>
+</div>
+
+<div class="faq-item">
+<h3>Quem pode usar o Afinity?</h3>
+<p>O Afinity é destinado exclusivamente a adultos maiores de 18 anos que buscam conexões autênticas baseadas em afinidade cultural, valores compartilhados e respeito mútuo.</p>
+</div>
+
+<div class="faq-item">
+<h3>O que diferencia o Afinity?</h3>
+<p>Focamos em afinidade cultural e valores compartilhados, não apenas em aparência. Oferecemos um ambiente seguro, moderado e institucionalmente responsável para conexões autênticas.</p>
+</div>
+</div>
+
+<a href="faq.html" class="faq-link">Ver todas as perguntas →</a>
+</div>
+</section>
+
+<!-- FORMULÁRIO -->
+<section class="form-section" id="form-section">
+<div class="container">
+<h2>Entre na lista de espera</h2>
+<p class="form-intro">Estamos validando o interesse antes de lançar a primeira versão.<br>Cadastre-se para receber novidades e acesso antecipado.</p>
+
+<form id="waitlist-form" class="waitlist-form" novalidate>
+<div class="form-group">
+<label for="email">E-mail</label>
+<input type="email" id="email" name="email" required placeholder="seu@email.com" autocomplete="email" inputmode="email">
+</div>
+
+<div class="checkbox-group">
+<label class="checkbox-label">
+<input type="checkbox" id="age-confirm" required>
+<span>Declaro que sou maior de 18 anos</span>
+</label>
+</div>
+
+<div class="checkbox-group">
+<label class="checkbox-label">
+<input type="checkbox" id="privacy-confirm" required>
+<span>Li e aceito a <a href="privacidade.html" class="privacy-link" target="_blank">política de privacidade</a></span>
+</label>
+</div>
+
+<button type="submit" class="submit-button">Quero participar</button>
+
+<div id="form-message" class="form-message" role="alert" aria-live="polite"></div>
+</form>
+</div>
+</section>
+
+<!-- ECOSSISTEMA -->
+<section class="ecosystem">
+<div class="container">
+<p>Projeto desenvolvido dentro do ecossistema <a href="https://saudeecannabis.com.br" target="_blank" rel="noopener noreferrer" class="ecosystem-link">Saúde & Cannabis</a>, com foco em informação responsável, comunidade e inovação.</p>
+</div>
+</section>
+
+<!-- RODAPÉ -->
+<footer class="footer">
+<div class="container">
+<div class="footer-content">
+<div class="footer-brand">
+<div class="footer-logo">🌱</div>
+<p class="footer-name">Afinity</p>
+<p class="footer-tagline">Conexões que florescem</p>
+</div>
+
+<div class="footer-links">
+<a href="privacidade.html">Política de Privacidade</a>
+<a href="faq.html">FAQ</a>
+<a href="https://saudeecannabis.com.br" target="_blank" rel="noopener noreferrer">Saúde & Cannabis</a>
+</div>
+</div>
+
+<div class="legal-text">
+<p>Este projeto respeita a legislação vigente. Não promove, incentiva ou orienta o uso de substâncias. O foco é relacionamento, afinidade cultural e bem-estar. Plataforma destinada exclusivamente a maiores de 18 anos.</p>
+</div>
+
+<p class="copyright">© 2025 Afinity - Todos os direitos reservados</p>
+</div>
+</footer>
+
+<script src="script.js" defer></script>
+</body>
+</html>
