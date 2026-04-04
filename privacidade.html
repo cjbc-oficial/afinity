@@ -1,136 +1,188 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
-<meta name="description" content="Política de Privacidade do Afinity. Saiba como protegemos seus dados pessoais em conformidade com a LGPD.">
-<meta name="theme-color" content="#0a1f0d">
-<title>Política de Privacidade - Afinity</title>
-<link rel="stylesheet" href="styles.css">
-<style>
-.privacy-page{padding:80px 20px;background:var(--bg-darkest);min-height:100vh}
-.privacy-header{text-align:center;margin-bottom:60px}
-.privacy-header h1{font-size:3rem;color:var(--accent-green);margin-bottom:20px}
-.privacy-header p{font-size:1.1rem;color:var(--text-muted)}
-.privacy-intro{background:var(--bg-card);padding:30px;border-radius:12px;margin-bottom:50px;border-left:4px solid var(--accent-green)}
-.privacy-content h2{font-size:2rem;color:var(--accent-light);margin-top:50px;margin-bottom:25px;padding-bottom:15px;border-bottom:2px solid var(--border-color)}
-.privacy-content h3{font-size:1.5rem;color:var(--accent-green);margin-top:35px;margin-bottom:20px}
-.privacy-content p{font-size:1.05rem;color:var(--text-secondary);line-height:1.9;margin-bottom:20px}
-.privacy-content strong{color:var(--accent-light);font-weight:600}
-.back-link{display:inline-block;color:var(--accent-green);text-decoration:none;font-weight:600;margin-bottom:40px;padding:12px 25px;border:2px solid var(--accent-green);border-radius:50px;transition:all .3s ease}
-.back-link:hover{background:var(--accent-green);color:var(--bg-darkest)}
-.back-link::before{content:"← ";margin-right:5px}
-</style>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+  <meta name="description" content="Politica de Privacidade do Afinity. Saiba como protegemos seus dados pessoais em conformidade com a LGPD.">
+  <meta name="robots" content="index, follow">
+  <meta name="theme-color" content="#0a1a0d">
+
+  <!-- Open Graph -->
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://afinity.app/privacidade.html">
+  <meta property="og:title" content="Politica de Privacidade - Afinity">
+  <meta property="og:description" content="Saiba como o Afinity protege seus dados pessoais em conformidade com a LGPD.">
+
+  <!-- Canonical -->
+  <link rel="canonical" href="https://afinity.app/privacidade.html">
+
+  <title>Politica de Privacidade - Afinity</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Playfair+Display:wght@400;600;700&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-<section class="privacy-page">
-<div class="container">
-<a href="index.html" class="back-link">Voltar para início</a>
 
-<div class="privacy-header">
-<h1>🔒 Política de Privacidade</h1>
-<p>Última atualização: 24 de dezembro de 2025</p>
-</div>
+  <!-- NAVBAR -->
+  <nav class="navbar" id="navbar" role="navigation" aria-label="Navegacao principal">
+    <div class="container navbar-inner">
+      <a href="index.html" class="navbar-brand" aria-label="Afinity - Pagina inicial">
+        <span class="navbar-logo-icon">&#127807;</span>
+        <span class="navbar-logo-text">Afinity</span>
+      </a>
+      <div class="navbar-links">
+        <a href="index.html#sobre" class="navbar-link">Sobre</a>
+        <a href="index.html#principios" class="navbar-link">Principios</a>
+        <a href="faq.html" class="navbar-link">FAQ</a>
+        <a href="index.html#cadastro" class="btn-nav">Lista de espera</a>
+      </div>
+      <button class="navbar-toggle" id="navbar-toggle" aria-label="Abrir menu" aria-expanded="false" aria-controls="navbar-mobile">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+    <div class="navbar-mobile" id="navbar-mobile" aria-hidden="true">
+      <a href="index.html#sobre" class="navbar-mobile-link">Sobre</a>
+      <a href="index.html#principios" class="navbar-mobile-link">Principios</a>
+      <a href="faq.html" class="navbar-mobile-link">FAQ</a>
+      <a href="privacidade.html" class="navbar-mobile-link">Privacidade</a>
+      <a href="index.html#cadastro" class="navbar-mobile-link navbar-mobile-cta">Entrar na lista de espera</a>
+    </div>
+  </nav>
 
-<div class="privacy-intro">
-<p><strong>A presente Política de Privacidade estabelece os termos e condições sob os quais o Afinity trata os dados pessoais coletados através desta plataforma de relacionamento e afinidade cultural.</strong> Nosso compromisso é garantir a proteção, segurança e privacidade de todos os dados pessoais que nos são confiados, em conformidade com a Lei Geral de Proteção de Dados Pessoais (Lei nº 13.709/2018 - LGPD) e demais legislações aplicáveis.</p>
-</div>
+  <!-- PAGE HEADER -->
+  <section class="page-hero">
+    <div class="container">
+      <div class="page-hero-content">
+        <span class="section-label">Transparencia e seguranca</span>
+        <h1 class="page-hero-title">&#128274; Politica de Privacidade</h1>
+        <p class="page-hero-desc">Ultima atualizacao: 04 de abril de 2026</p>
+      </div>
+    </div>
+  </section>
 
-<div class="privacy-content">
-<h2>1. Definições</h2>
-<p>Para os fins desta Política de Privacidade, considera-se:</p>
-<p><strong>Dado Pessoal</strong>: informação relacionada a pessoa natural identificada ou identificável.</p>
-<p><strong>Titular</strong>: pessoa natural a quem se referem os dados pessoais que são objeto de tratamento.</p>
-<p><strong>Tratamento</strong>: toda operação realizada com dados pessoais, como coleta, produção, recepção, classificação, utilização, acesso, reprodução, transmissão, distribuição, processamento, arquivamento, armazenamento, eliminação, avaliação ou controle da informação, modificação, comunicação, transferência, difusão ou extração.</p>
-<p><strong>Controlador</strong>: pessoa natural ou jurídica, de direito público ou privado, a quem competem as decisões referentes ao tratamento de dados pessoais.</p>
-<p><strong>Consentimento</strong>: manifestação livre, informada e inequívoca pela qual o titular concorda com o tratamento de seus dados pessoais para finalidade determinada.</p>
+  <!-- PRIVACY CONTENT -->
+  <section class="privacy-section">
+    <div class="container">
 
-<h2>2. Responsável pelo Tratamento de Dados</h2>
-<p>O responsável pelo tratamento dos dados pessoais coletados através do Afinity é o projeto desenvolvido dentro do ecossistema da CJBC (Câmara de Jurisprudência Brasileira da Cannabis), em parceria com o portal Saúde & Cannabis.</p>
-<p>Para questões relacionadas ao tratamento de dados pessoais, solicitações de exercício de direitos ou esclarecimentos sobre esta Política de Privacidade, entre em contato através do e-mail que será disponibilizado em breve na plataforma.</p>
+      <div class="privacy-intro-card">
+        <p><strong>A presente Politica de Privacidade estabelece os termos e condicoes sob os quais o Afinity trata os dados pessoais coletados atraves desta plataforma de relacionamento e afinidade cultural.</strong> Nosso compromisso e garantir a protecao, seguranca e privacidade de todos os dados pessoais que nos sao confiados, em conformidade com a Lei Geral de Protecao de Dados Pessoais (Lei n 13.709/2018 - LGPD) e demais legislacoes aplicaveis.</p>
+      </div>
 
-<h2>3. Dados Pessoais Coletados</h2>
+      <div class="privacy-content">
 
-<h3>3.1. Fase Atual (Lista de Espera)</h3>
-<p>Nesta fase de validação de interesse, coletamos apenas os dados estritamente necessários para comunicação e análise de demanda:</p>
-<p><strong>Endereço de e-mail</strong>: utilizado para comunicação sobre o lançamento da plataforma, envio de novidades e acesso antecipado.</p>
-<p><strong>Confirmação de maioridade</strong>: declaração de que o titular possui 18 anos ou mais, requisito obrigatório para participação.</p>
-<p><strong>Data e hora do cadastro</strong>: registro temporal da manifestação de interesse, utilizado para fins de análise e organização.</p>
-<p><strong>Consentimento</strong>: registro da aceitação desta Política de Privacidade.</p>
+        <h2>1. Definicoes</h2>
+        <p>Para os fins desta Politica de Privacidade, considera-se:</p>
+        <p><strong>Dado Pessoal</strong>: informacao relacionada a pessoa natural identificada ou identificavel.</p>
+        <p><strong>Titular</strong>: pessoa natural a quem se referem os dados pessoais que sao objeto de tratamento.</p>
+        <p><strong>Tratamento</strong>: toda operacao realizada com dados pessoais, como coleta, producao, recepcao, classificacao, utilizacao, acesso, reproducao, transmissao, distribuicao, processamento, arquivamento, armazenamento, eliminacao, avaliacao ou controle da informacao, modificacao, comunicacao, transferencia, difusao ou extracao.</p>
+        <p><strong>Controlador</strong>: pessoa natural ou juridica, de direito publico ou privado, a quem competem as decisoes referentes ao tratamento de dados pessoais.</p>
+        <p><strong>Consentimento</strong>: manifestacao livre, informada e inequivoca pela qual o titular concorda com o tratamento de seus dados pessoais para finalidade determinada.</p>
 
-<h3>3.2. Fase Futura (Plataforma Completa)</h3>
-<p>Quando o Afinity for lançado, poderão ser coletados dados adicionais, sempre mediante consentimento expresso e informado do titular, incluindo mas não se limitando a informações de perfil, dados de interação, preferências de comunicação, informações de dispositivo e navegação, e dados de verificação de identidade para recursos premium.</p>
+        <h2>2. Responsavel pelo Tratamento de Dados</h2>
+        <p>O responsavel pelo tratamento dos dados pessoais coletados atraves do Afinity e o projeto desenvolvido dentro do ecossistema da CJBC (Camara de Jurisprudencia Brasileira da Cannabis), em parceria com o portal Saude &amp; Cannabis.</p>
+        <p>Para questoes relacionadas ao tratamento de dados pessoais, solicitacoes de exercicio de direitos ou esclarecimentos sobre esta Politica de Privacidade, entre em contato atraves do e-mail que sera disponibilizado em breve na plataforma.</p>
 
-<h2>4. Finalidades do Tratamento de Dados</h2>
-<p>Os dados pessoais coletados são tratados exclusivamente para as seguintes finalidades:</p>
-<p><strong>Comunicação</strong>: enviar informações sobre o lançamento do Afinity, novidades, atualizações e acesso antecipado aos usuários cadastrados na lista de espera.</p>
-<p><strong>Validação de demanda</strong>: analisar o interesse do público-alvo e tomar decisões estratégicas sobre o desenvolvimento da plataforma.</p>
-<p><strong>Cumprimento de obrigações legais</strong>: atender requisitos legais e regulatórios, incluindo a verificação de maioridade.</p>
-<p><strong>Segurança</strong>: proteger a plataforma contra fraudes, abusos e atividades ilegais.</p>
-<p><strong>Melhoria da plataforma</strong>: compreender as necessidades dos usuários e aprimorar a experiência oferecida.</p>
+        <h2>3. Dados Pessoais Coletados</h2>
 
-<h2>5. Base Legal para o Tratamento</h2>
-<p>O tratamento de dados pessoais realizado pelo Afinity fundamenta-se nas seguintes bases legais previstas no artigo 7º da LGPD:</p>
-<p><strong>Consentimento do titular</strong>: mediante manifestação livre, informada e inequívoca, o titular concorda com o tratamento de seus dados pessoais para as finalidades especificadas.</p>
-<p><strong>Cumprimento de obrigação legal ou regulatória</strong>: tratamento necessário para atender requisitos legais, como a verificação de maioridade.</p>
-<p><strong>Execução de contrato</strong>: quando a plataforma completa for lançada, o tratamento será necessário para a execução do contrato de prestação de serviços.</p>
-<p><strong>Legítimo interesse</strong>: para garantir a segurança da plataforma, prevenir fraudes e melhorar nossos serviços, sempre respeitando os direitos e liberdades fundamentais dos titulares.</p>
+        <h3>3.1. Fase Atual (Lista de Espera)</h3>
+        <p>Nesta fase de validacao de interesse, coletamos apenas os dados estritamente necessarios para comunicacao e analise de demanda:</p>
+        <p><strong>Endereco de e-mail</strong>: utilizado para comunicacao sobre o lancamento da plataforma, envio de novidades e acesso antecipado.</p>
+        <p><strong>Confirmacao de maioridade</strong>: declaracao de que o titular possui 18 anos ou mais, requisito obrigatorio para participacao.</p>
+        <p><strong>Data e hora do cadastro</strong>: registro temporal da manifestacao de interesse, utilizado para fins de analise e organizacao.</p>
+        <p><strong>Consentimento</strong>: registro da aceitacao desta Politica de Privacidade.</p>
 
-<h2>6. Compartilhamento de Dados</h2>
-<p>Respeitamos profundamente a privacidade dos nossos usuários e não compartilhamos, vendemos ou alugamos dados pessoais identificáveis a terceiros para fins comerciais ou publicitários.</p>
-<p>Os dados pessoais poderão ser compartilhados apenas nas seguintes situações: com prestadores de serviços que nos auxiliam na operação da plataforma, por determinação legal ou ordem judicial, para proteção de direitos quando necessário, e na forma de dados agregados e anonimizados para fins estatísticos.</p>
+        <h3>3.2. Fase Futura (Plataforma Completa)</h3>
+        <p>Quando o Afinity for lancado, poderao ser coletados dados adicionais, sempre mediante consentimento expresso e informado do titular, incluindo mas nao se limitando a informacoes de perfil, dados de interacao, preferencias de comunicacao, informacoes de dispositivo e navegacao, e dados de verificacao de identidade para recursos premium.</p>
 
-<h2>7. Armazenamento e Segurança dos Dados</h2>
-<p>Implementamos medidas técnicas e organizacionais adequadas para proteger os dados pessoais contra acesso não autorizado, destruição, perda, alteração, comunicação ou qualquer forma de tratamento inadequado ou ilícito. Entre as medidas adotadas, destacam-se o armazenamento criptografado de dados sensíveis, controles de acesso rigorosos, monitoramento contínuo de segurança, backups regulares e treinamento da equipe sobre proteção de dados.</p>
-<p>Os dados pessoais serão armazenados apenas pelo tempo necessário para cumprir as finalidades para as quais foram coletados, respeitando os prazos legais aplicáveis.</p>
+        <h2>4. Finalidades do Tratamento de Dados</h2>
+        <p>Os dados pessoais coletados sao tratados exclusivamente para as seguintes finalidades:</p>
+        <p><strong>Comunicacao</strong>: enviar informacoes sobre o lancamento do Afinity, novidades, atualizacoes e acesso antecipado aos usuarios cadastrados na lista de espera.</p>
+        <p><strong>Validacao de demanda</strong>: analisar o interesse do publico-alvo e tomar decisoes estrategicas sobre o desenvolvimento da plataforma.</p>
+        <p><strong>Cumprimento de obrigacoes legais</strong>: atender requisitos legais e regulatorios, incluindo a verificacao de maioridade.</p>
+        <p><strong>Seguranca</strong>: proteger a plataforma contra fraudes, abusos e atividades ilegais.</p>
+        <p><strong>Melhoria da plataforma</strong>: compreender as necessidades dos usuarios e aprimorar a experiencia oferecida.</p>
 
-<h2>8. Direitos dos Titulares</h2>
-<p>Em conformidade com a LGPD, os titulares de dados pessoais têm direito a:</p>
-<p><strong>Confirmação e acesso</strong>: confirmar a existência de tratamento e acessar seus dados pessoais.</p>
-<p><strong>Correção</strong>: solicitar a correção de dados incompletos, inexatos ou desatualizados.</p>
-<p><strong>Anonimização, bloqueio ou eliminação</strong>: solicitar a anonimização, bloqueio ou eliminação de dados desnecessários ou tratados em desconformidade.</p>
-<p><strong>Portabilidade</strong>: solicitar a portabilidade dos dados a outro fornecedor de serviço.</p>
-<p><strong>Eliminação</strong>: solicitar a eliminação dos dados pessoais tratados com base no consentimento.</p>
-<p><strong>Revogação do consentimento</strong>: revogar o consentimento a qualquer momento.</p>
-<p>Para exercer qualquer um desses direitos, entre em contato através do canal de comunicação que será disponibilizado na plataforma. Responderemos às solicitações no prazo legal de 15 dias.</p>
+        <h2>5. Base Legal para o Tratamento</h2>
+        <p>O tratamento de dados pessoais realizado pelo Afinity fundamenta-se nas seguintes bases legais previstas no artigo 7 da LGPD:</p>
+        <p><strong>Consentimento do titular</strong>: mediante manifestacao livre, informada e inequivoca, o titular concorda com o tratamento de seus dados pessoais para as finalidades especificadas.</p>
+        <p><strong>Cumprimento de obrigacao legal ou regulatoria</strong>: tratamento necessario para atender requisitos legais, como a verificacao de maioridade.</p>
+        <p><strong>Execucao de contrato</strong>: quando a plataforma completa for lancada, o tratamento sera necessario para a execucao do contrato de prestacao de servicos.</p>
+        <p><strong>Legitimo interesse</strong>: para garantir a seguranca da plataforma, prevenir fraudes e melhorar nossos servicos, sempre respeitando os direitos e liberdades fundamentais dos titulares.</p>
 
-<h2>9. Privacidade de Menores de Idade</h2>
-<p>O Afinity é destinado exclusivamente a pessoas maiores de 18 anos. Não coletamos, intencionalmente, dados pessoais de menores de idade. Caso tomemos conhecimento de que coletamos inadvertidamente dados de menores, tomaremos medidas imediatas para eliminar tais informações.</p>
+        <h2>6. Compartilhamento de Dados</h2>
+        <p>Respeitamos profundamente a privacidade dos nossos usuarios e nao compartilhamos, vendemos ou alugamos dados pessoais identificaveis a terceiros para fins comerciais ou publicitarios.</p>
+        <p>Os dados pessoais poderao ser compartilhados apenas nas seguintes situacoes: com prestadores de servicos que nos auxiliam na operacao da plataforma, por determinacao legal ou ordem judicial, para protecao de direitos quando necessario, e na forma de dados agregados e anonimizados para fins estatisticos.</p>
 
-<h2>10. Alterações nesta Política de Privacidade</h2>
-<p>Esta Política de Privacidade pode ser atualizada periodicamente para refletir mudanças em nossas práticas de tratamento de dados, alterações legislativas ou melhorias em nossos serviços. Sempre que realizarmos alterações substanciais, notificaremos os usuários através do endereço de e-mail cadastrado ou por meio de aviso destacado na plataforma.</p>
+        <h2>7. Armazenamento e Seguranca dos Dados</h2>
+        <p>Implementamos medidas tecnicas e organizacionais adequadas para proteger os dados pessoais contra acesso nao autorizado, destruicao, perda, alteracao, comunicacao ou qualquer forma de tratamento inadequado ou ilicito. Entre as medidas adotadas, destacam-se o armazenamento criptografado de dados sensiveis, controles de acesso rigorosos, monitoramento continuo de seguranca, backups regulares e treinamento da equipe sobre protecao de dados.</p>
+        <p>Os dados pessoais serao armazenados apenas pelo tempo necessario para cumprir as finalidades para as quais foram coletados, respeitando os prazos legais aplicaveis.</p>
 
-<h2>11. Compromisso com a Transparência e Ética</h2>
-<p>Reafirmamos nosso compromisso com a transparência, ética e respeito aos direitos fundamentais de privacidade e proteção de dados pessoais. O Afinity foi concebido com os mais altos padrões de responsabilidade social e institucional, buscando criar um ambiente seguro, respeitoso e alinhado com os valores de bem-estar, liberdade de pensamento e dignidade humana.</p>
-<p>Não promovemos, incentivamos ou orientamos o uso de substâncias ilícitas. Nosso foco é exclusivamente em afinidade cultural, valores compartilhados e conexão humana baseada em respeito mútuo e diálogo consciente.</p>
-</div>
+        <h2>8. Direitos dos Titulares</h2>
+        <p>Em conformidade com a LGPD, os titulares de dados pessoais tem direito a:</p>
+        <p><strong>Confirmacao e acesso</strong>: confirmar a existencia de tratamento e acessar seus dados pessoais.</p>
+        <p><strong>Correcao</strong>: solicitar a correcao de dados incompletos, inexatos ou desatualizados.</p>
+        <p><strong>Anonimizacao, bloqueio ou eliminacao</strong>: solicitar a anonimizacao, bloqueio ou eliminacao de dados desnecessarios ou tratados em desconformidade.</p>
+        <p><strong>Portabilidade</strong>: solicitar a portabilidade dos dados a outro fornecedor de servico.</p>
+        <p><strong>Eliminacao</strong>: solicitar a eliminacao dos dados pessoais tratados com base no consentimento.</p>
+        <p><strong>Revogacao do consentimento</strong>: revogar o consentimento a qualquer momento.</p>
+        <p>Para exercer qualquer um desses direitos, entre em contato atraves do canal de comunicacao que sera disponibilizado na plataforma. Responderemos as solicitacoes no prazo legal de 15 dias.</p>
 
-<a href="index.html" class="back-link">Voltar para início</a>
-</div>
-</section>
+        <h2>9. Privacidade de Menores de Idade</h2>
+        <p>O Afinity e destinado exclusivamente a pessoas maiores de 18 anos. Nao coletamos, intencionalmente, dados pessoais de menores de idade. Caso tomemos conhecimento de que coletamos inadvertidamente dados de menores, tomaremos medidas imediatas para eliminar tais informacoes.</p>
 
-<footer class="footer">
-<div class="container">
-<div class="footer-content">
-<div class="footer-brand">
-<div class="footer-logo">🌱</div>
-<p class="footer-name">Afinity</p>
-<p class="footer-tagline">Conexões que florescem</p>
-</div>
+        <h2>10. Alteracoes nesta Politica de Privacidade</h2>
+        <p>Esta Politica de Privacidade pode ser atualizada periodicamente para refletir mudancas em nossas praticas de tratamento de dados, alteracoes legislativas ou melhorias em nossos servicos. Sempre que realizarmos alteracoes substanciais, notificaremos os usuarios atraves do endereco de e-mail cadastrado ou por meio de aviso destacado na plataforma.</p>
 
-<div class="footer-links">
-<a href="privacidade.html">Política de Privacidade</a>
-<a href="faq.html">FAQ</a>
-<a href="https://saudeecannabis.com.br" target="_blank" rel="noopener noreferrer">Saúde & Cannabis</a>
-</div>
-</div>
+        <h2>11. Compromisso com a Transparencia e Etica</h2>
+        <p>Reafirmamos nosso compromisso com a transparencia, etica e respeito aos direitos fundamentais de privacidade e protecao de dados pessoais. O Afinity foi concebido com os mais altos padroes de responsabilidade social e institucional, buscando criar um ambiente seguro, respeitoso e alinhado com os valores de bem-estar, liberdade de pensamento e dignidade humana.</p>
+        <p>Nao promovemos, incentivamos ou orientamos o uso de substancias ilicitas. Nosso foco e exclusivamente em afinidade cultural, valores compartilhados e conexao humana baseada em respeito mutuo e dialogo consciente.</p>
 
-<div class="legal-text">
-<p>Este projeto respeita a legislação vigente. Não promove, incentiva ou orienta o uso de substâncias. O foco é relacionamento, afinidade cultural e bem-estar. Plataforma destinada exclusivamente a maiores de 18 anos.</p>
-</div>
+      </div>
 
-<p class="copyright">© 2025 Afinity - Todos os direitos reservados</p>
-</div>
-</footer>
+      <!-- CTA -->
+      <div class="faq-page-cta">
+        <p class="faq-page-cta-text">Tem duvidas sobre privacidade? Consulte nossa FAQ ou entre na lista de espera.</p>
+        <div class="privacy-cta-buttons">
+          <a href="faq.html" class="btn-outline" aria-label="Ver perguntas frequentes">Ver FAQ &#8594;</a>
+          <a href="index.html#cadastro" class="btn-primary" aria-label="Ir para o formulario de cadastro">Entrar na lista de espera &#8594;</a>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer role="contentinfo">
+    <div class="container">
+      <div class="footer-top">
+        <div class="footer-brand">
+          <div class="footer-logo">
+            <span class="footer-logo-icon" aria-hidden="true">&#127807;</span>
+            Afinity
+          </div>
+          <span class="footer-tagline">Conexoes que florescem</span>
+        </div>
+        <nav class="footer-links" aria-label="Links do rodape">
+          <a href="privacidade.html" aria-current="page">Politica de Privacidade</a>
+          <a href="faq.html">FAQ</a>
+          <a href="https://saudeecannabis.com.br" target="_blank" rel="noopener">Saude &amp; Cannabis</a>
+        </nav>
+      </div>
+      <div class="footer-divider" role="separator"></div>
+      <p class="footer-legal">
+        Este projeto respeita a legislacao vigente. Nao promove, incentiva ou orienta o uso de substancias.
+        O foco e relacionamento, afinidade cultural e bem-estar.
+        Plataforma destinada exclusivamente a maiores de 18 anos.
+      </p>
+      <div class="footer-bottom">
+        <span class="footer-copy">&copy; 2026 Afinity &mdash; Todos os direitos reservados</span>
+      </div>
+    </div>
+  </footer>
+
+  <script src="script.js" defer></script>
 </body>
 </html>

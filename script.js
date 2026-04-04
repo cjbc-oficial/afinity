@@ -1,107 +1,122 @@
-// Função para rolar suavemente até o formulário
-function scrollToForm(){const e=document.getElementById("form-section");e&&e.scrollIntoView({behavior:"smooth",block:"center"})}
+// Afinity - script.js
 
-// Manipulação do formulário com otimizações
-document.addEventListener("DOMContentLoaded",function(){
-const form=document.getElementById("waitlist-form");
-const formMessage=document.getElementById("form-message");
-const emailInput=document.getElementById("email");
-const ageConfirm=document.getElementById("age-confirm");
-const privacyConfirm=document.getElementById("privacy-confirm");
+(function () {
+  'use strict';
 
-// Validação de e-mail otimizada
-const emailRegex=/^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+  // ============================================
+  // NAVBAR: scroll effect + mobile toggle
+  // ============================================
 
-function showMessage(msg,type){
-formMessage.textContent=msg;
-formMessage.className="form-message "+type;
-formMessage.style.display="block";
-requestAnimationFrame(()=>{
-formMessage.scrollIntoView({behavior:"smooth",block:"nearest"})
-})
-}
+  var navbar = document.getElementById('navbar');
+  var toggle = document.getElementById('navbar-toggle');
+  var mobileMenu = document.getElementById('navbar-mobile');
 
-function submitForm(email){
-const submitButton=form.querySelector(".submit-button");
-submitButton.disabled=true;
-submitButton.textContent="Enviando...";
+  if (navbar) {
+    window.addEventListener('scroll', function () {
+      if (window.scrollY > 20) {
+        navbar.classList.add('scrolled');
+      } else {
+        navbar.classList.remove('scrolled');
+      }
+    }, { passive: true });
+  }
 
-setTimeout(()=>{
-const waitlistData={
-email:email,
-timestamp:new Date().toISOString(),
-ageConfirmed:true,
-privacyAccepted:true
-};
+  if (toggle && mobileMenu) {
+    toggle.addEventListener('click', function () {
+      var isOpen = mobileMenu.classList.contains('open');
+      mobileMenu.classList.toggle('open');
+      toggle.setAttribute('aria-expanded', String(!isOpen));
+      mobileMenu.setAttribute('aria-hidden', String(isOpen));
+    });
 
-let waitlist=[];
-try{
-waitlist=JSON.parse(localStorage.getItem("waitlist")||"[]")
-}catch(e){
-console.error("Erro ao ler localStorage:",e)
-}
+    var mobileLinks = mobileMenu.querySelectorAll('.navbar-mobile-link');
+    mobileLinks.forEach(function (link) {
+      link.addEventListener('click', function () {
+        mobileMenu.classList.remove('open');
+        toggle.setAttribute('aria-expanded', 'false');
+        mobileMenu.setAttribute('aria-hidden', 'true');
+      });
+    });
+  }
 
-if(waitlist.some(item=>item.email===email)){
-showMessage("Este e-mail já está cadastrado na lista de espera!","error");
-submitButton.disabled=false;
-submitButton.textContent="Quero participar";
-return
-}
+  // ============================================
+  // SMOOTH SCROLL for anchor links
+  // ============================================
 
-waitlist.push(waitlistData);
-try{
-localStorage.setItem("waitlist",JSON.stringify(waitlist))
-}catch(e){
-console.error("Erro ao salvar no localStorage:",e)
-}
+  document.querySelectorAll('a[href^="#"]').forEach(function (anchor) {
+    anchor.addEventListener('click', function (e) {
+      var target = document.querySelector(this.getAttribute('href'));
+      if (target) {
+        e.preventDefault();
+        var offset = 72;
+        var top = target.getBoundingClientRect().top + window.pageYOffset - offset;
+        window.scrollTo({ top: top, behavior: 'smooth' });
+      }
+    });
+  });
 
-showMessage("Cadastro realizado com sucesso! Em breve você receberá novidades sobre a plataforma.","success");
-form.reset();
-submitButton.disabled=false;
-submitButton.textContent="Quero participar"
-},1500)
-}
+  // ============================================
+  // FADE-IN ANIMATIONS on scroll
+  // ============================================
 
-form.addEventListener("submit",function(e){
-e.preventDefault();
+  var fadeEls = document.querySelectorAll('.fade-in');
 
-formMessage.className="form-message";
-formMessage.style.display="none";
+  if ('IntersectionObserver' in window && fadeEls.length > 0) {
+    var observer = new IntersectionObserver(function (entries) {
+      entries.forEach(function (entry) {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('visible');
+          observer.unobserve(entry.target);
+        }
+      });
+    }, { threshold: 0.12, rootMargin: '0px 0px -40px 0px' });
 
-const email=emailInput.value.trim();
+    fadeEls.forEach(function (el) {
+      observer.observe(el);
+    });
+  } else {
+    fadeEls.forEach(function (el) {
+      el.classList.add('visible');
+    });
+  }
 
-if(!email){
-showMessage("Por favor, preencha seu e-mail.","error");
-emailInput.focus();
-return
-}
+  // ============================================
+  // SIGNUP FORM
+  // ============================================
 
-if(!emailRegex.test(email)){
-showMessage("Por favor, insira um e-mail válido.","error");
-emailInput.focus();
-return
-}
+  var form = document.getElementById('signup-form');
+  var successMsg = document.getElementById('form-success');
 
-if(!ageConfirm.checked){
-showMessage("Você precisa confirmar que é maior de 18 anos.","error");
-return
-}
+  if (form) {
+    form.addEventListener('submit', function (e) {
+      e.preventDefault();
 
-if(!privacyConfirm.checked){
-showMessage("Você precisa aceitar a política de privacidade.","error");
-return
-}
+      var email = document.getElementById('email');
+      var ageConfirm = document.getElementById('age-confirm');
+      var privacyConfirm = document.getElementById('privacy-confirm');
 
-submitForm(email)
-});
+      if (!email || !email.value.trim() || !/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email.value.trim())) {
+        email.style.borderColor = '#ef4444';
+        email.focus();
+        setTimeout(function () { email.style.borderColor = ''; }, 2500);
+        return;
+      }
 
-// Animação suave ao carregar a página com otimização
-const hero=document.querySelector(".hero");
-if(hero){
-hero.style.opacity="0";
-requestAnimationFrame(()=>{
-hero.style.transition="opacity 1s ease-in";
-hero.style.opacity="1"
-})
-}
-});
+      if (!ageConfirm || !ageConfirm.checked) {
+        alert('Voce precisa confirmar que e maior de 18 anos.');
+        return;
+      }
+
+      if (!privacyConfirm || !privacyConfirm.checked) {
+        alert('Voce precisa aceitar a politica de privacidade.');
+        return;
+      }
+
+      form.style.display = 'none';
+      if (successMsg) {
+        successMsg.style.display = 'block';
+      }
+    });
+  }
+
+})();

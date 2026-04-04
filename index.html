@@ -2,24 +2,83 @@
 <html lang="pt-BR">
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
   <meta name="description" content="Afinity - Conexoes que florescem. Plataforma de relacionamento para adultos que compartilham valores, visao aberta sobre cannabis, bem-estar e dialogo consciente.">
+  <meta name="robots" content="index, follow">
+  <meta name="theme-color" content="#0a1a0d">
+
+  <!-- Open Graph -->
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://afinity.app/">
+  <meta property="og:title" content="Afinity - Conexoes que florescem">
+  <meta property="og:description" content="Uma nova plataforma de relacionamento para adultos que compartilham valores, visao aberta sobre cannabis, bem-estar e dialogo consciente.">
+  <meta property="og:image" content="https://afinity.app/og-image.png">
+
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Afinity - Conexoes que florescem">
+  <meta name="twitter:description" content="Conexoes baseadas em afinidade, respeito e liberdade de pensamento.">
+
+  <!-- Canonical -->
+  <link rel="canonical" href="https://afinity.app/">
+
   <title>Afinity - Conexoes que florescem</title>
+
+  <!-- Fonts: carregado apenas uma vez aqui, removido do CSS -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Playfair+Display:wght@400;600;700&display=swap" rel="stylesheet">
+
   <link rel="stylesheet" href="styles.css">
+
+  <!-- Schema.org -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "WebSite",
+    "name": "Afinity",
+    "url": "https://afinity.app",
+    "description": "Plataforma de relacionamento baseada em afinidade cultural e valores compartilhados.",
+    "inLanguage": "pt-BR"
+  }
+  </script>
 </head>
 <body>
+
+  <!-- NAVBAR -->
+  <nav class="navbar" id="navbar" role="navigation" aria-label="Navegacao principal">
+    <div class="container navbar-inner">
+      <a href="index.html" class="navbar-brand" aria-label="Afinity - Pagina inicial">
+        <span class="navbar-logo-icon">&#127807;</span>
+        <span class="navbar-logo-text">Afinity</span>
+      </a>
+      <div class="navbar-links">
+        <a href="#sobre" class="navbar-link">Sobre</a>
+        <a href="#principios" class="navbar-link">Principios</a>
+        <a href="#faq" class="navbar-link">FAQ</a>
+        <a href="#cadastro" class="btn-nav" aria-label="Entrar na lista de espera">Lista de espera</a>
+      </div>
+      <button class="navbar-toggle" id="navbar-toggle" aria-label="Abrir menu" aria-expanded="false" aria-controls="navbar-mobile">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+    <div class="navbar-mobile" id="navbar-mobile" aria-hidden="true">
+      <a href="#sobre" class="navbar-mobile-link">Sobre</a>
+      <a href="#principios" class="navbar-mobile-link">Principios</a>
+      <a href="#faq" class="navbar-mobile-link">FAQ</a>
+      <a href="faq.html" class="navbar-mobile-link">FAQ Completo</a>
+      <a href="#cadastro" class="navbar-mobile-link navbar-mobile-cta">Entrar na lista de espera</a>
+    </div>
+  </nav>
 
   <!-- HERO -->
   <section class="hero" id="inicio">
     <div class="hero-content">
       <div class="hero-badge">
-        <span class="hero-badge-dot"></span>
+        <span class="hero-badge-dot" aria-hidden="true"></span>
         Em breve &mdash; Lista de espera aberta
       </div>
-      <div class="hero-logo">&#127807;</div>
+      <div class="hero-logo" aria-hidden="true">&#127807;</div>
       <h1 class="hero-title">Afinity</h1>
       <p class="hero-tagline">Conexoes que florescem</p>
       <p class="hero-subtitle">
@@ -27,20 +86,20 @@
         <strong>valores</strong>, visao aberta sobre <strong>cannabis</strong>,
         bem-estar e <strong>dialogo consciente</strong>.
       </p>
-      <a href="#cadastro" class="btn-primary">
+      <a href="#cadastro" class="btn-primary" aria-label="Entrar na lista de espera do Afinity">
         Entrar na lista de espera
-        <span>&#8594;</span>
+        <span aria-hidden="true">&#8594;</span>
       </a>
-      <div class="hero-stats">
-        <div class="hero-stat">
+      <div class="hero-stats" role="list" aria-label="Destaques da plataforma">
+        <div class="hero-stat" role="listitem">
           <span class="hero-stat-number">18+</span>
           <span class="hero-stat-label">Apenas adultos</span>
         </div>
-        <div class="hero-stat">
+        <div class="hero-stat" role="listitem">
           <span class="hero-stat-number">100%</span>
           <span class="hero-stat-label">Seguro e privado</span>
         </div>
-        <div class="hero-stat">
+        <div class="hero-stat" role="listitem">
           <span class="hero-stat-number">LGPD</span>
           <span class="hero-stat-label">Conformidade total</span>
         </div>
@@ -69,7 +128,7 @@
         </div>
         <div class="about-visual fade-in">
           <div class="about-card-main">
-            <span class="about-card-icon">&#128161;</span>
+            <span class="about-card-icon" aria-hidden="true">&#128161;</span>
             <p class="about-card-text">
               &ldquo;Nao e sobre o que voce consome.
               E sobre <strong>quem voce e</strong>,
@@ -92,25 +151,25 @@
         <span class="section-label">Nossos pilares</span>
         <h2 class="section-title">Principios do projeto</h2>
       </div>
-      <div class="principles-grid">
-        <div class="principle-card fade-in">
-          <span class="principle-icon">&#128274;</span>
+      <div class="principles-grid" role="list">
+        <div class="principle-card fade-in" role="listitem">
+          <span class="principle-icon" aria-hidden="true">&#128274;</span>
           <p class="principle-title">Apenas para maiores de 18 anos</p>
         </div>
-        <div class="principle-card fade-in">
-          <span class="principle-icon">&#128221;</span>
+        <div class="principle-card fade-in" role="listitem">
+          <span class="principle-icon" aria-hidden="true">&#128221;</span>
           <p class="principle-title">Regras claras de convivencia</p>
         </div>
-        <div class="principle-card fade-in">
-          <span class="principle-icon">&#128737;</span>
+        <div class="principle-card fade-in" role="listitem">
+          <span class="principle-icon" aria-hidden="true">&#128737;</span>
           <p class="principle-title">Moderacao ativa</p>
         </div>
-        <div class="principle-card fade-in">
-          <span class="principle-icon">&#128683;</span>
+        <div class="principle-card fade-in" role="listitem">
+          <span class="principle-icon" aria-hidden="true">&#128683;</span>
           <p class="principle-title">Sem apologia, incentivo ou comercio</p>
         </div>
-        <div class="principle-card fade-in">
-          <span class="principle-icon">&#127807;</span>
+        <div class="principle-card fade-in" role="listitem">
+          <span class="principle-icon" aria-hidden="true">&#127807;</span>
           <p class="principle-title">Foco em bem-estar, cultura e dialogo</p>
         </div>
       </div>
@@ -157,7 +216,7 @@
         </div>
       </div>
       <div class="faq-cta fade-in">
-        <a href="faq.html" class="btn-outline">Ver todas as perguntas &#8594;</a>
+        <a href="faq.html" class="btn-outline" aria-label="Ver todas as perguntas frequentes">Ver todas as perguntas &#8594;</a>
       </div>
     </div>
   </section>
@@ -175,7 +234,7 @@
           </p>
         </div>
         <div class="form-card fade-in">
-          <form id="signup-form" novalidate>
+          <form id="signup-form" novalidate aria-label="Formulario de cadastro na lista de espera">
             <div class="form-group">
               <label for="email">Seu melhor e-mail</label>
               <input
@@ -186,22 +245,25 @@
                 inputmode="email"
                 autocomplete="email"
                 required
+                aria-required="true"
+                aria-describedby="email-hint"
               >
+              <span id="email-hint" class="sr-only">Digite um endereco de e-mail valido</span>
             </div>
             <div class="checkbox-group">
               <label class="checkbox-label">
-                <input type="checkbox" id="age-confirm" required>
+                <input type="checkbox" id="age-confirm" required aria-required="true">
                 <span>Declaro que sou maior de 18 anos</span>
               </label>
               <label class="checkbox-label">
-                <input type="checkbox" id="privacy-confirm" required>
-                <span>Li e aceito a <a href="privacidade.html" target="_blank">politica de privacidade</a></span>
+                <input type="checkbox" id="privacy-confirm" required aria-required="true">
+                <span>Li e aceito a <a href="privacidade.html" target="_blank" rel="noopener" aria-label="Ler politica de privacidade (abre em nova aba)">politica de privacidade</a></span>
               </label>
             </div>
-            <button type="submit" class="btn-submit">Quero participar &#8594;</button>
+            <button type="submit" class="btn-submit" aria-label="Enviar cadastro na lista de espera">Quero participar &#8594;</button>
           </form>
-          <div class="form-success" id="form-success">
-            <span class="form-success-icon">&#127807;</span>
+          <div class="form-success" id="form-success" role="alert" aria-live="polite">
+            <span class="form-success-icon" aria-hidden="true">&#127807;</span>
             <h3>Cadastro realizado!</h3>
             <p>Em breve voce recebera novidades sobre o Afinity. Obrigado!</p>
           </div>
@@ -216,7 +278,7 @@
       <div class="ecosystem-inner fade-in">
         <p class="ecosystem-text">
           Projeto em desenvolvimento dentro do ecossistema
-          <a href="https://saudeecannabis.com.br" target="_blank" rel="noopener">Saude &amp; Cannabis</a>,
+          <a href="https://saudeecannabis.com.br" target="_blank" rel="noopener" aria-label="Visitar portal Saude e Cannabis (abre em nova aba)">Saude &amp; Cannabis</a>,
           com foco em informacao responsavel, comunidade e inovacao.
         </p>
       </div>
@@ -224,30 +286,30 @@
   </section>
 
   <!-- FOOTER -->
-  <footer>
+  <footer role="contentinfo">
     <div class="container">
       <div class="footer-top">
         <div class="footer-brand">
           <div class="footer-logo">
-            <span class="footer-logo-icon">&#127807;</span>
+            <span class="footer-logo-icon" aria-hidden="true">&#127807;</span>
             Afinity
           </div>
           <span class="footer-tagline">Conexoes que florescem</span>
         </div>
-        <nav class="footer-links">
+        <nav class="footer-links" aria-label="Links do rodape">
           <a href="privacidade.html">Politica de Privacidade</a>
           <a href="faq.html">FAQ</a>
           <a href="https://saudeecannabis.com.br" target="_blank" rel="noopener">Saude &amp; Cannabis</a>
         </nav>
       </div>
-      <div class="footer-divider"></div>
+      <div class="footer-divider" role="separator"></div>
       <p class="footer-legal">
         Este projeto respeita a legislacao vigente. Nao promove, incentiva ou orienta o uso de substancias.
         O foco e relacionamento, afinidade cultural e bem-estar.
         Plataforma destinada exclusivamente a maiores de 18 anos.
       </p>
       <div class="footer-bottom">
-        <span class="footer-copy">&copy; 2025 Afinity &mdash; Todos os direitos reservados</span>
+        <span class="footer-copy">&copy; 2026 Afinity &mdash; Todos os direitos reservados</span>
       </div>
     </div>
   </footer>
